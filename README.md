@@ -66,3 +66,33 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 ---------------
 
+6. Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+Examples:
+
+```js
+'abc' =>  ['ab', 'c_']
+'abcdef' => ['ab', 'cd', 'ef']
+```
+
+---------------
+
+7. Write a simple parser that will parse and run Deadfish.
+
+Deadfish has 4 commands, each 1 character long:
+
+`i` increments the value (initially 0)
+
+`d` decrements the value
+
+`s` squares the value
+
+`o` outputs the value into the return array
+
+Invalid characters should be ignored.
+
+Examples:
+
+```js
+parse("iiisdoso") => [ 8, 64 ]
+```
