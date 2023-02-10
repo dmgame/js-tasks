@@ -1,0 +1,21 @@
+{
+  "name": "js-tasks",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmgame/js-tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmgame/js-tasks/issues"
+  },
+  "homepage": "https://github.com/dmgame/js-tasks#readme",
+  "devDependencies": {
+    "jest": "^29.4.2"
+  }
+}
