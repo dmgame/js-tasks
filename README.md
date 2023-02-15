@@ -96,3 +96,31 @@ Examples:
 ```js
 parse("iiisdoso") => [ 8, 64 ]
 ```
+
+---------------
+
+8. Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+
+Your task is to process a string with "#" symbols.
+
+**Examples**:
+```js
+"abc#d##c"      ==>  "ac"
+"abc##d######"  ==>  ""
+"#######"       ==>  ""
+""              ==>  ""
+```
+
+---------------
+
+9. Your task is to create a function that turns a string into a Mexican Wave. 
+You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up. 
+**Rules**:
+    1. The input string will always be lower case but maybe empty.
+
+    2. If the character in the string is whitespace then pass over it as if it was an empty seat
+
+Example:
+```js
+wave("hello") // => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+```
