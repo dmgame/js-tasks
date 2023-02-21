@@ -50,22 +50,6 @@ console.log(resOfSplitCamelCase)
 //3
 
 function showNameOfPeople(array){
-//     let arrayManipulation = {
-//         1: function () {
-//             return `${array[0]} likes this`
-//         },
-//         '2': function(){
-//             return `${array[0]}, ${array[1]} likes this`
-//         },
-//         '3': function () {
-//              return `${array[0]}, ${array[1]} and ${array[2]} like this`
-//         },
-//         'default': function(){
-//             `${array[0]}, ${array[1]}, ${array.length} and others like this`
-//         }
-//     }
-
-//    return  arrayManipulation[array]
     switch(array.length){
         case 0:return'no one likes this'; 
             break;
@@ -185,10 +169,30 @@ function deadFish(item){
 
 let result = deadFish("iiisdoso")
 console.log(result)
-// result = deadFish("iiiiiisdosoooo")
-// console.log(result)
-// result = deadFish("iiiiiiddddsodso")
-// console.log(result)
+
+//8
+function deleteLetterBeforeHash(item){
+    let arrayFromString =  makeFromStringArray(item)
+    let res = ''
+    for(let i = 0; i< arrayFromString.length; i++){
+        if(arrayFromString[i] !== '#'){
+            res = res + arrayFromString[i]
+        }
+        else{
+            res = res.slice(0,-1)
+        }
+    }
+    return res
+}
+
+res = deleteLetterBeforeHash("abc#d##c");
+console.log(res)
+res = deleteLetterBeforeHash("abc##d######")
+console.log(res)
+res = deleteLetterBeforeHash("#######")
+console.log(res)
+res = deleteLetterBeforeHash("")
+console.log(res)
 
 module.exports = {
     splitsTheStringIntoPairs,
@@ -200,5 +204,6 @@ module.exports = {
     getSumOfNumbers,
     makeManipulationsWithArray,
     returnArrayWithUniqueValues,
-    deadFish
+    deadFish,
+    deleteLetterBeforeHash
 }

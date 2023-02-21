@@ -7,7 +7,8 @@ const {
     getSumOfNumbers,
     makeManipulationsWithArray,
     returnArrayWithUniqueValues,
-    deadFish
+    deadFish,
+    deleteLetterBeforeHash
  } = require('../src/example')
 
  //1
@@ -162,16 +163,18 @@ describe('makeFromStringArray', () => {
             let target = 10
             makeFromStringArray(target)
         }
-        expect(resultFn).toThrow()//to be array
+        expect(resultFn).toThrow()
     })
     it('should return error if function has object in arguments ,', () => {
         const resultFn = () => {
             let target = {}
             makeFromStringArray(target)
         }
-        expect(resultFn).toThrow()//to be array
+        expect(resultFn).toThrow()
     })
 })
+
+//4
 
 describe('getSumOfNumbers', () => {
     it('should return error if function has nothing in arguments', () => {
@@ -215,6 +218,8 @@ describe('makeManipulationsWithArray', () => {
     })
 })
 
+//5
+
 describe('returnArrayWithUniqueValues', () => {
     it('Expect [1,2,2,3,3] => [1,2,3]', () => {
         expect(returnArrayWithUniqueValues([1,2,2,3,3])).toEqual([1,2,3]);
@@ -232,6 +237,8 @@ describe('returnArrayWithUniqueValues', () => {
            expect(resultFn).toThrow()
     })
 })
+
+//6
 
 describe('splitsTheStringIntoPairs', () => {
     it('is a function', () => {
@@ -272,6 +279,8 @@ describe('splitsTheStringIntoPairs', () => {
      })
 })
 
+//7
+
 describe('deadFish', () => {
     it('should return error if function has nothing in arguments', () => {
         const resultFn = () => {
@@ -305,5 +314,52 @@ describe('deadFish', () => {
     })
     it('Expect iiisdoso => [8, 64]', () => {
         expect(deadFish("iiisdoso")).toEqual([8, 64])
+    })
+})
+
+//8
+
+describe('deleteLetterBeforeHash', () => {
+    it('should return error if function has nothing in arguments', () => {
+        const resultFn = () => {
+          deleteLetterBeforeHash()
+           }
+        expect(resultFn).toThrow()
+    })
+    it('should return error if function has array of numbers in arguments', () => {
+        const resultFn = () => {
+          deleteLetterBeforeHash(['1', '2', '3'])
+           }
+        expect(resultFn).toThrow()
+    })
+    it('should return error if function has array of strings in arguments', () => {
+        const resultFn = () => {
+          deleteLetterBeforeHash(['a', 'f', 'd'])
+           }
+        expect(resultFn).toThrow()
+    })
+    it('should return error if function has object in arguments', () => {
+        const resultFn = () => {
+          deleteLetterBeforeHash({})
+           }
+        expect(resultFn).toThrow()
+    })
+    it('should return error if function has array of symbols in arguments', () => {
+        const resultFn = () => {
+          deleteLetterBeforeHash(['^',')',"#"])
+           }
+        expect(resultFn).toThrow()
+    })
+    it('Expect abc#d##c => ac', () => {
+        expect(deleteLetterBeforeHash("abc#d##c")).toEqual('ac')
+    })
+    it('Expect "abc##d######"=> ""', () => {
+        expect(deleteLetterBeforeHash("abc##d######")).toEqual("")
+    })
+    it('Expect "#######"=> ""', () => {
+        expect(deleteLetterBeforeHash("#######")).toEqual("")
+    })
+    it('Expect ""=> ""', () => {
+        expect(deleteLetterBeforeHash("")).toEqual("")
     })
 })
