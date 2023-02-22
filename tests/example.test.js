@@ -32,17 +32,14 @@ describe('calculateSum', () => {
   })
   it('should return error if function has null in arguments ,', () => {
     const resultFn = () => {
-      let argument
-      let target
-      calculateSum(argument, target)
+      calculateSum(null, null)
     }
     expect(resultFn).toThrow()
   })
   it('should return error if function has null in arguments ,', () => {
     const resultFn = () => {
-      let argument
       const target = 8
-      calculateSum(argument, target)
+      calculateSum(null, target)
     }
     expect(resultFn).toThrow()
   })
@@ -252,7 +249,6 @@ describe('splitsTheStringIntoPairs', () => {
   })
 
   it('should throw an error if function has number in argument', () => {
-    const argument = 5
     const resultFn = () => {
       splitsTheStringIntoPairs(5678)
     }
@@ -298,7 +294,7 @@ describe('deadFish', () => {
     const resultFn = () => {
       deadFish('&*(^%$#@')
     }
-    expect(resultFn).toBeUndefined
+    expect(resultFn).toBeUndefined()
   })
   it('Expect iiisdoso => [8, 64]', () => {
     expect(deadFish('iiisdoso')).toEqual([8, 64])
