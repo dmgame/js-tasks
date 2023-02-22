@@ -2,7 +2,8 @@
   "name": "js-tasks",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,12 @@
   },
   "homepage": "https://github.com/dmgame/js-tasks#readme",
   "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
     "jest": "^29.4.2"
   }
 }
