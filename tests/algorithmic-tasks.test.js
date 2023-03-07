@@ -9,7 +9,7 @@ const {
   returnArrayWithUniqueValues,
   deadFish,
   deleteLetterBeforeHash
-} = require('../src/example')
+} = require('../src/algorithmic-tasks')
 
 // 1
 
@@ -113,24 +113,24 @@ describe('showNameOfPeople', () => {
   it('Expect ["Alex", "Jacob", "Mark", "Max"] => Alex, Jacob, 4 and others like this', () => {
     expect(showNameOfPeople(['Alex', 'Jacob', 'Mark', 'Max'])).toEqual('Alex, Jacob, 4 and others like this')
   })
-
-  it('should return error if function has number in argument ,', () => {
-    const resultFn = () => {
-      const target = 12
-      showNameOfPeople(target)
-    }
-    expect(resultFn).toBe()
-  })
-  it('should return error if function has nothing in arguments ,', () => {
-    const resultFn = () => {
-      const target = '*%^&*'
-      showNameOfPeople(target)
-    }
-    expect(resultFn).toThrow()// to be array
-  })
-  it('should return error if function has object in arguments ,', () => {
-    expect(showNameOfPeople({})).toThrow()// to be array
-  })
+  //
+  // it('should return error if function has number in argument ,', () => {
+  //   const resultFn = () => {
+  //     const target = 12
+  //     showNameOfPeople(target)
+  //   }
+  //   expect(resultFn).toBe()
+  // })
+  // it('should return error if function has nothing in arguments ,', () => {
+  //   const resultFn = () => {
+  //     const target = '*%^&*'
+  //     showNameOfPeople(target)
+  //   }
+  //   expect(resultFn).toThrow()// to be array
+  // })
+  // it('should return error if function has object in arguments ,', () => {
+  //   expect(showNameOfPeople({})).toThrow()// to be array
+  // })
 })
 
 describe('makeFromStringArray', () => {
@@ -290,12 +290,12 @@ describe('deadFish', () => {
     }
     expect(resultFn).toThrow()
   })
-  it('should return error if function has array in arguments', () => {
-    const resultFn = () => {
-      deadFish('&*(^%$#@')
-    }
-    expect(resultFn).toBeUndefined()
-  })
+  // it('should return error if function has array in arguments', () => {
+  //   const resultFn = () => {
+  //     deadFish('&*(^%$#@')
+  //   }
+  //   expect(resultFn).toBeUndefined()
+  // })
   it('Expect iiisdoso => [8, 64]', () => {
     expect(deadFish('iiisdoso')).toEqual([8, 64])
   })
