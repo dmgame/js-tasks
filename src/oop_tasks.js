@@ -1,13 +1,13 @@
-//1
+// 1
 class Book {
-    constructor(title, author, bookPublishtYear){
-        this.title = title;
-        this.author = author;
-        this.bookPublishtYear = bookPublishtYear;
-    }
-    getBookInfo(){
-        return `${this.title} by ${this.author}, published in ${this.bookPublishtYear}`;
-    }
+  constructor(title, author, bookPublishtYear){
+    this.title = title;
+    this.author = author;
+    this.bookPublishtYear = bookPublishtYear;
+  }
+  getBookInfo() {
+    return `${this.title} by ${this.author}, published in ${this.bookPublishtYear}`;
+  }
 }
 
 const currentBook = new Book('The Catcher in the Rye', 'J.D.Salinger', 1951);
@@ -15,7 +15,7 @@ console.log(currentBook);
 let info = currentBook.getBookInfo();
 console.log(info);
 
-//2
+// 2
 class Car {
     constructor(vehicleMake, modelOfCar, yearOfManufacture, colorOfCar) {
         this.vehicleMake = vehicleMake;
@@ -42,8 +42,7 @@ const myCar = ('Toyota', 'Corolla', 2010, 'silver');
  myCarStaticMethodCall = Car.giveNotificationOfStop();
  console.log(myCarStaticMethodCall);
 
- //3
-
+ // 3
 class Animal {
     constructor(nameOfAnimal, kindOfAnimal) {
         this.nameOfAnimal = nameOfAnimal;
@@ -92,7 +91,7 @@ console.log(animalInfo);
 animalInfo = myCat.getSoundOfCat();
 console.log(animalInfo);
 
-//4
+// 4
 class User {
     constructor(userName, userAge, userEmail) {
         this.userName = userName;
@@ -143,7 +142,7 @@ const myTeacher = new Teacher('Proffesor Jhonson', 45, 'blablabla@gmail.com', 'E
 callUserMethods = myTeacher.getInfoAboutSubject();
 console.log(callUserMethods);
 
-//5
+// 5
 class Phone {
     constructor(modelOfPhone, brendOfPhone, phonePrice, phoneColor, isTurnedOff) {
         this.modelOfPhone = modelOfPhone;
