@@ -192,3 +192,69 @@ resultOfCallMethod = mySmartphone.getInfoAboutTurnOff();
 console.log(resultOfCallMethod);
 resultOfCallMethod = mySmartphone.openApp();
 console.log(resultOfCallMethod);
+
+//6
+
+// let toDoList = {};
+
+let arrayOfAllTasks = [];
+
+let index_of_task;
+
+ 
+
+class ToDo {
+  constructor(taskTitle, dueDateOfTask, taskCategory, taskId) {
+    this.taskTitle = taskTitle;
+    this.dueDateOfTask = dueDateOfTask;
+    this.taskCategory = taskCategory;
+    this.taskId = taskId;
+  }
+  ['addTask'](){
+     arrayOfAllTasks.push(
+        {
+          '_id': this.taskId,
+          'title':this.taskTitle,
+          'due data':this.dueDateOfTask,
+          'category': this.taskCategory,
+        })
+        return  arrayOfAllTasks;
+   }
+  ['deleteTask'](id_of_task){
+    arrayOfAllTasks.forEach((elem, index, arr) => {
+       if (id_of_task === elem._id){
+            arr.splice(index, 1)
+          }
+          return arrayOfAllTasks
+          })                                                                                                        
+        }
+   ['getTaskList'](currentTaskList){
+    return console.log(currentTaskList);
+   }
+}
+
+let proba = new ToDo('to do dish', '23/05/01', 'culinary', '45467');
+proba.addTask();
+proba = new ToDo('to do homework', '23/05/07', 'culinary', '45469');
+proba.addTask()
+proba = new ToDo('to do js task', '23/05/09', 'js', '45470');
+proba.addTask()
+proba.getTaskList(arrayOfAllTasks)
+proba.deleteTask('45470');
+proba.getTaskList(arrayOfAllTasks)
+
+class PersonalToDoList extends ToDo {
+  constructor(taskTitle, dueDateOfTask, taskCategory, taskId, taskPriority, taskDeadline) {
+    super(taskTitle, dueDateOfTask, taskCategory, taskId);
+    this.taskPriority = taskPriority;
+    this.taskDeadline = taskDeadline;
+  }
+  set priorSet(prior){
+    this.taskPriority = prior
+  }
+}
+
+let personalToDoList = new PersonalToDoList('to do nothing', '23/05/09', 'culinary', '45470', 'hight', '24/05/09');
+personalToDoList.addTask()
+personalToDoList.brand()
+personalToDoList.getTaskList(arrayOfAllTasks)
