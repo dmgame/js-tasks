@@ -1,6 +1,6 @@
 // 1
 class Book {
-  constructor(title, author, publishYear){
+  constructor(title, author, publishYear) {
     this.title = title;
     this.author = author;
     this.publishYear = publishYear;
@@ -26,7 +26,8 @@ class Car {
   start() {
     return `The car is now running`;
   }
-  stop() {return `The car is now stopped`;
+  stop() {
+    return `The car is now stopped`;
   }
   drive(amountOfMiles) {
     return `The car has driven ${amountOfMiles} miles. Total mileage is now ${amountOfMiles}.`;
@@ -65,7 +66,7 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
-  constructor(name, kind){
+  constructor(name, kind) {
     super(name, kind);
   }
   getInfo(){
@@ -95,7 +96,7 @@ class User {
     this.age = age;
     this.email = email;
   }
-  getInfo(){
+  getInfo() {
     return `${this.name} is ${this.age} years old and their email adress is ${this.email}`;
   }
 }
