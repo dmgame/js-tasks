@@ -17,19 +17,19 @@ console.log(info);
 
 // 2
 class Car {
-  constructor(vehicleMake, model, yearOfManufacture, color) {
+  constructor (vehicleMake, model, yearOfManufacture, color) {
     this.vehicleMake = vehicleMake;
     this.modelOfCar = model;
     this.yearOfManufacture = yearOfManufacture;
     this.colorOfCar = color;
   }
-  start() {
+  start () {
     return `The car is now running`;
   }
-  stop() {
+  stop () {
     return `The car is now stopped`;
   }
-  drive(amountOfMiles) {
+  drive (amountOfMiles) {
     return `The car has driven ${amountOfMiles} miles. Total mileage is now ${amountOfMiles}.`;
   }
 }
@@ -44,11 +44,11 @@ const myCar = new Car('Toyota', 'Corolla', 2010, 'silver');
 
  // 3
 class Animal {
-  constructor(name, kind) {
+  constructor (name, kind) {
     this.name = name;
     this.kind= kind;
   }
-  getInfo(){
+  getInfo() {
     return `${this.name} is a ${this.kind}`;
   }
 }
@@ -66,7 +66,7 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
-  constructor(name, kind) {
+  constructor (name, kind) {
     super(name, kind);
   }
   getInfo(){
@@ -91,7 +91,7 @@ console.log(animalInfo);
 
 // 4
 class User {
-  constructor(name, age, email) {
+  constructor (name, age, email) {
     this.name = name;
     this.age = age;
     this.email = email;
