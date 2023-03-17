@@ -11,7 +11,7 @@ class Book {
 }
 
 const bookData = new Book ('The Catcher in the Rye', 'J.D.Salinger', 1951);
-const info = bookData.getInfo();
+const info = bookData.getInfo ();
 console.log(info);
 // 2
 class Car {
