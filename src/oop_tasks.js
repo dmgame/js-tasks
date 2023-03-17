@@ -1,212 +1,200 @@
 // 1
 class Book {
   constructor (title, author, publishYear) {
-    this.title = title;
-    this.author = author;
-    this.publishYear = publishYear;
+    this.title = title
+    this.author = author
+    this.publishYear = publishYear
   }
-  getInfo() {
-    return `${this.title} by ${this.author}, published in ${this.publishYear}`;
-  };
+  getInfo () {
+    return `${this.title} by ${this.author}, published in ${this.publishYear}`
+  }
 }
 
-const bookData = new Book ('The Catcher in the Rye', 'J.D.Salinger', 1951);
-const info = bookData.getInfo ();
-console.log(info);
+const bookData = new Book('The Catcher in the Rye', 'J.D.Salinger', 1951)
+const info = bookData.getInfo()
 // 2
 class Car {
   constructor (vehicleMake, model, yearOfManufacture, color) {
-    this.vehicleMake = vehicleMake;
-    this.modelOfCar = model;
-    this.yearOfManufacture = yearOfManufacture;
-    this.colorOfCar = color;
+    this.vehicleMake = vehicleMake
+    this.modelOfCar = model
+    this.yearOfManufacture = yearOfManufacture
+    this.colorOfCar = color
   }
   start () {
-    return `The car is now running`;
+    return 'The car is now running'
   }
   stop () {
-    return `The car is now stopped`;
+    return 'The car is now stopped';
   }
   drive (amountOfMiles) {
-    return `The car has driven ${amountOfMiles} miles. Total mileage is now ${amountOfMiles}.`;
+    return `The car has driven + ${amountOfMiles} + miles. Total mileage is now + ${amountOfMiles}.`
   }
 }
 
-const myCar = new Car('Toyota', 'Corolla', 2010, 'silver');
- let myCarMethodCall = myCar.start();
- console.log(myCarMethodCall);
- myCarMethodCall = myCar.drive(100);
- console.log(myCarMethodCall);
- myCarMethodCall = myCar.stop();
- console.log(myCarMethodCall);
-
+const myCar = new Car('Toyota', 'Corolla', 2010, 'silver')
+let myCarMethodCall = myCar.start()
+ myCarMethodCall = myCar.drive(100)
+ myCarMethodCall = myCar.stop()
  // 3
 class Animal {
   constructor (name, kind) {
-    this.name = name;
-    this.kind= kind;
+    this.name = name
+    this.kind = kind
   }
-  getInfo() {
-    return `${this.name} is a ${this.kind}`;
+  getInfo () {
+    return `${this.name} is a ${this.kind}`
   }
 }
 
 class Dog extends Animal {
-  constructor(name, kind) {
-    super(name, kind);
+  constructor (name, kind) {
+    super(name, kind)
   }
-  getInfo() {
+  getInfo () {
     return super.getInfo()
   }
-  bark() {
-    return 'Woof';
+  bark () {
+    return 'Woof'
   }
 }
 
 class Cat extends Animal {
   constructor (name, kind) {
-    super(name, kind);
+    super(name, kind)
   }
-  getInfo(){
-    return super.getInfo();
+  getInfo () {
+    return super.getInfo()
   }
-  meow(){
-    return 'Meow!';
+  meow () {
+    return 'Meow!'
   }
 }
 
-const myDog = new Dog('Fido', 'dog');
-let animalInfo = myDog.getInfo();
-console.log(animalInfo);
-animalInfo = myDog.bark();
-console.log(animalInfo);
+const myDog = new Dog('Fido', 'dog')
+let animalInfo = myDog.getInfo()
+console.log(animalInfo)
+animalInfo = myDog.bark()
+console.log(animalInfo)
 
-const myCat = new Cat('Morty', 'cat');
-animalInfo = myCat.getInfo();
-console.log(animalInfo);
-animalInfo = myCat.meow();
-console.log(animalInfo);
+const myCat = new Cat('Morty', 'cat')
+animalInfo = myCat.getInfo()
+console.log(animalInfo)
+animalInfo = myCat.meow()
+console.log(animalInfo)
 
 // 4
 class User {
   constructor (name, age, email) {
-    this.name = name;
-    this.age = age;
-    this.email = email;
+    this.name = name
+    this.age = age
+    this.email = email
   }
-  getInfo() {
-    return `${this.name} is ${this.age} years old and their email adress is ${this.email}`;
+  getInfo () {
+    return `${this.name} is ${this.age} years old and their email is ${this.email}`
   }
 }
 
 class Student extends User {
-  constructor(name, age, email, major) {
-    super(name, age, email);
-    this.major = major;
+  constructor (name, age, email, major) {
+    super(name, age, email)
+    this.major = major
   }
-  getInfo(){
-    return super.getInfo();
+  getInfo () {
+    return super.getInfo()
   }
-  getMajor(){
-    return `${this.name} is majoiring in ${this.major}`;
+  getMajor () {
+    return `${this.name} is major ing in ${this.major}`
   }
 }
 
 class Teacher extends User {
-  constructor(name, age, email, subject) {
-    super(name, age, email);
-    this.subject = subject;
+  constructor (name, age, email, subject) {
+    super(name, age, email)
+    this.subject = subject
   }
-  getInfo(){
-    super.getInfo();
+  getInfo () {
+    super.getInfo()
   }
-  getSubject(){
-    return `${this.name} teaches ${this.subject}`;
+  getSubject () {
+    return `${this.name} teaches ${this.subject}`
   }
 }
 
-const userInfo =  new User('John Doe', 20, 'blablabla@gmail.com', 'Computer Science');
-let callUserMethods = userInfo.getInfo();
-console.log(callUserMethods);
+const userInfo =  new User('John Doe', 20, 'blablabla@gmail.com', 'Computer Science')
+let callUserMethods = userInfo.getInfo()
+console.log(callUserMethods)
 
-const myStudent = new Student('John Doe', 20, 'blablabla@gmail.com', 'Computer Science');
-callUserMethods = myStudent.getMajor();
-console.log(callUserMethods);
+const myStudent = new Student('John Doe', 20, 'blablabla@gmail.com', 'Computer Science')
+callUserMethods = myStudent.getMajor()
+console.log(callUserMethods)
 
 
-const myTeacher = new Teacher('Proffesor Jhonson', 45, 'blablabla@gmail.com', 'English language');
-callUserMethods = myTeacher.getSubject();
-console.log(callUserMethods);
+const myTeacher = new Teacher('Proffesor Jhonson', 45, 'blablabla@gmail.com', 'English language')
+callUserMethods = myTeacher.getSubject()
+console.log(callUserMethods)
 
-// 5
+//5
 class Phone {
-  constructor(model, brand, price, color, isTurnedOn) {
-    this.model = model;
-    this.brand = brand;
-    this.price = price;
-    this.color = color;
-    this.isTurnedOn = isTurnedOn;
+  constructor (model, brand, price, color, isTurnedOn) {
+    this.model = model
+    this.brand = brand
+    this.price = price
+    this.color = color
+    this.isTurnedOn = isTurnedOn
   }
-  turnOn() {
-    return `The phone now is turn on!`;
+  turnOn () {
+    return 'The phone now is turn on!'
   }
-  turnOff() {
-    return `The phone now is turn off!`;
+  turnOff () {
+    return 'The phone now is turn off!'
   }
 }
 
 class Smartphone extends Phone {
   constructor(model, brand, price, color, apps = [], isTurnedOn) {
-    super(model, brand, price, color, isTurnedOn);
-    this.apps = apps;
+    super(model, brand, price, color, isTurnedOn)
+    this.apps = apps
   }
-  turnOn() {
-    return  super.turnOn();
+  turnOn () {
+    return  super.turnOn()
   }
-  turnOff(){
-    return super.turnOff();
+  turnOff (){
+    return super.turnOff()
   }
-  openApp() {
-    if(this.isTurnedOn === true && this.apps.length) {
+  openApp () {
+    if (this.isTurnedOn === true && this.apps.length) {
         return `Please wait. We open ${this.apps}`
-    }
-    else{
+    } else {
       return `Please turn on smartphone!`
     }
   }
 }
-
-const mySmartphone = new Smartphone('Iphone 13', 'Apple', 799, 'white', ['Camera'], false);
-let resultOfCallMethod = mySmartphone.turnOn();
-console.log(resultOfCallMethod);
-resultOfCallMethod = mySmartphone.turnOff();
-console.log(resultOfCallMethod);
-
-resultOfCallMethod = mySmartphone.openApp();
-console.log(resultOfCallMethod);
-
+const mySmartphone = new Smartphone('Iphone 13', 'Apple', 799, 'white', ['Camera'], false)
+let resultOfCallMethod = mySmartphone.turnOn()
+resultOfCallMethod = mySmartphone.turnOff()
+resultOfCallMethod = mySmartphone.openApp()
 //6
 class ToDoList {
-  constructor() {
+  constructor () {
     this.tasksList = []
   }
 
-  addTask({ title, body }) {
-    const newTask = this.createTask({ title, body })
+  addTask ({ title, body }) {
+    const newTask = this.createTask ({ title, body })
     this.tasksList.push(newTask)
   }
 
-  createTask({ title, body }) {
+  createTask ({ title, body }) {
     const id = this.tasksList.length + 1
-    return { id, title, body };
+    return { id, title, body }
   }
-  deleteTask(id) {
+  deleteTask (id) {
     const index = this.tasksList.findIndex((task) => task.id === id)
-    if (index === -1) return this.tasksList;
-    this.tasksList.splice(index, 1);
-    return this.tasksList;
+    if (index === -1) return this.tasksList
+    this.tasksList.splice(index, 1)
+    return this.tasksList
   }
-  getTasks() {
+  getTasks () {
     return this.tasksList
   }
 }
@@ -217,20 +205,20 @@ class PersonalToDoList extends ToDoList {
     Mid: 'Middle',
     High: 'High'
   }
-  constructor() {
+  constructor () {
     super()
   }
-  addTask({ title, body, priority = PersonalToDoList.priorities.Low, deadline }) {
+  addTask ({ title, body, priority = PersonalToDoList.priorities.Low, deadline }) {
     const basicTask = super.createTask({ title, body })
     this.tasksList.push({ ...basicTask, priority, deadline })
     return this.tasksList
   }
-  setTaskPriority(id, priority) {
+  setTaskPriority (id, priority) {
     const index = this.tasksList.findIndex((task) => task.id === id)
     if (index === -1) return this.tasksList
     this.tasksList[index]['priority'] = priority
   }
-  setTaskDeadline(id, deadline) {
+  setTaskDeadline (id, deadline) {
     const index = this.tasksList.findIndex((task) => task.id === id)
     if (index === -1) return this.tasksList
     this.tasksList[index]['deadline'] = deadline
