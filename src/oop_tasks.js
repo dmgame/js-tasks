@@ -7,10 +7,10 @@ class Book {
   }
   getInfo() {
     return `${this.title} by ${this.author}, published in ${this.publishYear}`;
-  }
+  };
 }
 
-const bookData = new Book('The Catcher in the Rye', 'J.D.Salinger', 1951);
+const bookData = new Book ('The Catcher in the Rye', 'J.D.Salinger', 1951);
 const info = bookData.getInfo();
 console.log(info);
 
