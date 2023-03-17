@@ -10,9 +10,8 @@ class Book {
   }
 }
 
-const currentBook = new Book('The Catcher in the Rye', 'J.D.Salinger', 1951);
-console.log(currentBook);
-let info = currentBook.getInfo();
+const bookData = new Book('The Catcher in the Rye', 'J.D.Salinger', 1951);
+const info = bookData.getInfo();
 console.log(info);
 
 // 2
